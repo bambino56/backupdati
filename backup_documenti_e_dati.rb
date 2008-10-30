@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+# Mi piacerebbe cambiare questo file in git
+
 
 require 'FileUtils'
 require 'rubyscript2exe'

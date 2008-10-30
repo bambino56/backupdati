@@ -21,7 +21,7 @@ dstpath      = "\\backup\\#{computername}\\#{username}\\Documents and Settings"
 # qui mettiamo un cmd parser
 cmd = CmdParse::CommandParser.new( true, true )
 # aggiunge l'help
-cmd.add_command( CmdParse::HelpCommand.new, false )
+cmd.add_command( CmdParse::HelpCommand.new, true )
 cmd.program_name = "backup_documenti_e_dati"
 cmd.program_version = [0,1,0]
 cmd.add_command( CmdParse::VersionCommand.new )
@@ -92,6 +92,6 @@ roborun.set_execution_block do |args|
   end
 end #roborun execution block
 
-cmd.add_command(roborun)
+cmd.add_command(roborun, true) # default command
 
 cmd.parse
